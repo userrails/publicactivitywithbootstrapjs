@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap + Public Activity</title>
+    <%= stylesheet_link_tag  "application", "bootstrap.min", :media => "all" %>
+    <%= javascript_include_tag "application", "bootstrap.min" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="container">
+      <%= yield %>
+
+      <div class="well">
+        <h2>At last i will remove this, now for check</h2>
+        <div class="center-block">Center block </div>
+        <div class="clearfix">...example of clearfix</div>
+
+        <div class="show">show class to show the div</div>
+        <div class="hidden">hidden class is to hide the div</div>
+
+        <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+      </div>
+
+      <div class="well">
+        <h2 class="text-success">Modal example</h2>
+
+        <button id="shivmodal" type="button" data-toggle="modal" data-target="#myModal">Modal popup example</button>
+
+        <div id="myModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+      </div>
+
+      <div class="well">
+        <h2 class="text-success">Dropdown example</h2>
+        <div class="dropdown">
+          <a class="btn btn-primary" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+            Dropdown <span class="caret"></span>
+          </a>
+
+
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <li>
+              <%= link_to "something1" %>
+            </li>
+            <li>
+              <%= link_to "something2" %>
+            </li>
+            <li>
+              <%= link_to "something3" %>
+            </li>
+            <li>
+              <%= link_to "something4" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="well">
+        <h2 class="text-success">Tab pan</h2>
+        <ul class="nav nav-tabs" role="tablist" id="myTab">
+          <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+          <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+          <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+          <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="home">..hi there.</div>
+          <div class="tab-pane" id="profile">
+            <p>fadsfdsfdsf df das fdas f das f adsf dasf ds f dsf dsff</p>
+            <p>fadsfdsfdsf df das fdas f das f adsf dasf ds f dsf dsff</p>
+            <p>fadsfdsfdsf df das fdas f das f adsf dasf ds f dsf dsff</p>
+            <p>fadsfdsfdsf df das fdas f das f adsf dasf ds f dsf dsff</p>
+            
+          </div>
+          <div class="tab-pane" id="messages">.43342 432 234 32 4 234 324 32 4.</div>
+          <div class="tab-pane" id="settings">..$%$#% $#%$#% #$%$%$%$%$%$% $%$%$%$%$% $%$%$%.</div>
+        </div>
+
+        <script>
+          $(function() {
+            $('#myTab a:last').tab('show')
+          })
+        </script>
+      </div>
+
+      <div class="well">
+        <h2 class="text-success">Tool Tips</h2>
+        <button id="tooltip" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+        <button id="tooltip1" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+        <button id="tooltip2" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+        <button id="tooltip3" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+      </div>
+
+
+
+
+
+
+      <div class="well">
+        <h2 class="text-success">Collapse</h2>
+
+        <div class="panel-group shivcollapsible" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  Collapsible Group Item #1
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  Collapsible Group Item #2
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  Collapsible Group Item #3
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="well">
+        <h2 class="text-success">Carousel</h2>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <%= image_tag "1.jpg" %>
+              <div class="carousel-caption">
+                dkfjadsf df dask fds fjdsf
+              </div>
+            </div>
+            <div class="item">
+              <%= image_tag "2.jpg" %>
+              <div class="carousel-caption">
+                34324324324 32 4324 32 44 
+              </div>
+            </div>
+            <div class="item">
+              <%= image_tag "3.jpg" %>
+              <div class="carousel-caption">
+                34324324324 32 4324 32 44 
+              </div>
+            </div>
+            <div class="item">
+              <%= image_tag "4.jpg" %>
+              <div class="carousel-caption">
+                34324324324 32 4324 32 44 
+              </div>
+            </div>
+            <div class="item">
+              <%= image_tag "5.jpg" %>
+              <div class="carousel-caption">
+                34324324324 32 4324 32 44 
+              </div>
+            </div>
+            picture
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>  
+
+        <script>
+          $('.carousel').carousel({
+            interval: 1000
+          });
+        </script>
+      </div>
+
+
+
+
+
+    </div>
+  </body>
+</html>
+
+<style>
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#shivmodal").click(function() {
+      $('#myModal').modal({
+        keyboard: false
+      });
+    });
+
+    $('.dropdown-toggle').dropdown();
+
+    $('#tooltip').tooltip();
+    $('#tooltip1').tooltip();
+    $('#tooltip2').tooltip();
+    $('#tooltip3').tooltip();
+
+    $('.shivcollapsible').collapse({
+      toggle: true;
+    });
+  });
+</script>

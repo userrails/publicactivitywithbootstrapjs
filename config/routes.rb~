@@ -1,0 +1,5 @@
+Bbbtesting::Application.routes.draw do
+  resources :homes
+  resources :articles  
+  root :to => 'articles#index'
+end
